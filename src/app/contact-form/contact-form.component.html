@@ -1,0 +1,47 @@
+<!-- <form>  
+<div class="form-group">
+<label for="firstName">FirstName</label>
+<input 
+ [(ngModel)]="firstName"
+ (change)="displayuser()"
+ minlength="3" 
+ maxlength="10" 
+ pattern="banana"  
+ type="text" 
+ id="firstName" 
+ class="form-control">
+<div class="alert alert-danger"
+ *ngIf="firstName.touched $$ !firstName.valid">
+    <div 
+    *ngIf="firstName.errors.required">
+    First Name is required
+</div>
+    <div 
+    *ngIf="firstName.errors.minlength">
+    FirstName should be a minimum of{{firstname.errors.minlength.requiredLength}}
+</div>
+    <div 
+    *ngIf="firstName.errors.maxlength">
+    First name should not exceed 10 chars
+</div>
+    <div *ngIf="firstName.errors.pattern">
+        FirstName does not match the pattern
+    </div>
+</div>
+</div>
+
+<div class="form-group">
+    <label for="comment">Comment</label>
+    <textarea type="" 
+    id="comment" 
+    cols="30" 
+    rows="10" 
+    class="form-control">
+</textarea>
+</div>
+<button class="btn btn-primary">submit</button>
+
+
+
+
+</form> -->
