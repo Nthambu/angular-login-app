@@ -1,0 +1,17 @@
+
+.form-group{
+    padding: 10px;
+    
+}
+button{
+    color:#fff;
+    background-color: blue;
+  
+  font-size: 22px;
+  align-items: center;
+  place-items: center;
+}
+
+a{
+    margin-left: 10px;
+}

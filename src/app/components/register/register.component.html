@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row mt-3">
+        <div class="col col-lg-7">
+<form #registrationForm="ngForm" (ngSubmit)="onRegister()">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" [(ngModel)]="username" #usernameCtrl="ngModel" minlength="3" required class="form-control">
+      <div  *ngIf="usernameCtrl.touched && usernameCtrl.errors?.['required']">
+        <small>Username is required.</small>
+      </div>
+      <div  *ngIf="usernameCtrl.errors?.['minlength']">
+        <small>minimum of 3 characters required</small>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" [(ngModel)]="email" #emailCtrl="ngModel" required email class="form-control">
+      <!-- <div *ngIf=" registrationForm.submitted && !registrationForm.valid"> -->
+      <div *ngIf="emailCtrl.touched && emailCtrl.errors?.['required']">
+        <small>Email is required.</small>
+      </div>
+      <div *ngIf="emailCtrl.errors?.['email']">
+        <small>Invalid email address.</small>
+      </div>
+    </div>
+<!-- </div> -->
+  
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" [(ngModel)]="password" #passwordCtrl="ngModel" required minlength="6" class="form-control">
+      <div *ngIf="passwordCtrl.touched && passwordCtrl.errors?.['required']">
+        <small>Password is required.</small>
+      </div>
+      <div *ngIf="passwordCtrl.errors?.['minlength']">
+        <small>Password must be at least 6 characters long.</small>
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="registrationForm.invalid">Register</button>
+    <a routerLink="dashboard">Login</a>
+  </form>
+</div>
+</div>
+</div>
+  

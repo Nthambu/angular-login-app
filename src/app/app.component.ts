@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { ContactFormComponent } from "./contact-form/contact-form.component";
+
 import { NgModel } from '@angular/forms';
 import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,CommonModule,RouterModule],
+  imports: [RouterOutlet,CommonModule,RouterModule,RegisterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
