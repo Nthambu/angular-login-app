@@ -2,9 +2,9 @@
 <form #loginForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
   <div>
     <label for="username">Username:</label>
-    <input type="text" id="username" [(ngModel)]="username" name="username" required>
+    <input type="text" id="username" [(ngModel)]="username" #usernameCtrl="ngModel" name="usernameCtrl" required>
     <div *ngIf="loginForm.submitted && !username.valid">
-      <small *ngIf="username.errors?.required">Username is required.</small>
+      <small *ngIf="usernameCtrl.errors?.['required']">Username is required.</small>
     </div>
   </div>
 
